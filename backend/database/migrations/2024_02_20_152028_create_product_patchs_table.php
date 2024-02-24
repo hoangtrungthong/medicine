@@ -21,7 +21,6 @@ return new class extends Migration
             $table->date('manufacture_date');
             $table->decimal('original_price', 18, 2);
             $table->decimal('retail_price', 18, 2);
-            $table->decimal('import_price', 18, 2);
             $table->longText('description');
             $table->softDeletes();
             $table->timestamps();
