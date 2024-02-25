@@ -4,7 +4,6 @@ namespace App\Models\Traits\Relationship;
 
 use App\Models\OrderDetail;
 use App\Models\Payment;
-use App\Models\User;
 
 /**
  * Class OrderRelationship.

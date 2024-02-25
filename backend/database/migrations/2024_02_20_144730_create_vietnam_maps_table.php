@@ -18,7 +18,7 @@ class CreateVietnamMapsTable extends Migration
         $columnNames = config('vietnam-maps.columns');
 
         if (empty($tableNames)) {
-            throw new \Exception('Error: config/vietnam-maps.php not loaded. Run [php artisan config:clear] and try again.');
+            throw new Exception('Error: config/vietnam-maps.php not loaded. Run [php artisan config:clear] and try again.');
         }
 
         Schema::create($tableNames['provinces'], function (Blueprint $table) use ($columnNames) {
@@ -67,16 +67,16 @@ class CreateVietnamMapsTable extends Migration
         $columnNames = config('vietnam-maps.columns');
 
         if (empty($tableNames)) {
-            throw new \Exception('Error: config/vietnam-maps.php not found and defaults could not be merged.
+            throw new Exception('Error: config/vietnam-maps.php not found and defaults could not be merged.
              Please publish the package configuration before proceeding, or drop the tables manually.');
         }
 
         Schema::table($tableNames['wards'], function (Blueprint $table) use ($tableNames, $columnNames) {
-            $table->dropForeign( $tableNames['wards'] . '_' . $columnNames['district_id'] . '_foreign');
+            $table->dropForeign($tableNames['wards'] . '_' . $columnNames['district_id'] . '_foreign');
         });
 
         Schema::table($tableNames['districts'], function (Blueprint $table) use ($tableNames, $columnNames) {
-            $table->dropForeign( $tableNames['districts'] . '_' . $columnNames['province_id'] . '_foreign');
+            $table->dropForeign($tableNames['districts'] . '_' . $columnNames['province_id'] . '_foreign');
         });
 
         Schema::dropIfExists($tableNames['provinces']);

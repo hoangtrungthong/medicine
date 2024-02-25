@@ -7,5 +7,4 @@ namespace App\Models\Traits\Attribute;
  */
 trait ProductImageAttribute
 {
-
 }

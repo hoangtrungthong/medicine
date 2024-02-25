@@ -7,5 +7,4 @@ namespace App\Models\Traits\Scope;
  */
 trait OrderDetailScope
 {
-
 }
